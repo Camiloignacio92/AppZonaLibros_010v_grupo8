@@ -5,8 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import com.example.appzonalibros.navigation.AppNavigation
 import com.example.appzonalibros.ui.theme.AppZonaLibrosTheme
+import com.example.appzonalibros.navigation.AppNavigation
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppZonaLibrosTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-                    AppNavigation()
+                    com.example.appzonalibros.navigation.AppNavigation()
                 }
             }
         }
