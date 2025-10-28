@@ -28,7 +28,12 @@ fun AppNavigation() {
                 onGoRecuperar = { nav.navigate(Route.RecuperarPass.path) }
             )
         }
-        composable(Route.Registro.path) { RegistroScreen(onBack = { nav.popBackStack() }) }
+        composable(Route.Registro.path) {
+            RegistroScreen(
+                onBack = { nav.popBackStack() },
+                onRegistered = { nav.navigate(Route.Perfil.path) }
+            )
+        }
         composable(Route.Perfil.path)   { PerfilScreen(onBack = { nav.popBackStack() }) }
         composable(Route.RecuperarPass.path) { RecuperarPassScreen(onBack = { nav.popBackStack() }) }
     }
